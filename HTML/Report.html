@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Logo của trang-->
+        <link rel="icon" href="/img/logo_ou.png" type="image/x-icon"/>
+
+        <!-- Tên chủ đề trang -->
+        <title>Chào mừng đến với website</title>
+
+        <!-- Danh sách các từ khoá -->
+        <meta name="keywords" content="html, css, js">
+
+        <!-- Kiểu nội dung trang -->
+        <meta http-equiv="content-type" name="text/html; charset=UTF-8">
+        <!-- <meta http-equiv="refresh" content="120"> -->
+
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="/CSS/ReportCss.css" />
+
+        <!-- JavaScript -->
+        <script type="text/javascript" src=""></script>
+        <!-- <script src="/Js/MyJs.js"></script> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/cloudinary-core/2.11.3/cloudinary-core-shrinkwrap.min.js"></script>
+        
+        <!--Send mail-->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+            (function () {
+                emailjs.init({
+                    publicKey: "wtXVbhxRVLwBufKxr",
+                });
+            })();
+        </script>
+    </head>
+    <body>
+        <div>
+
+            <header>
+                <ul>
+                    <li><a href="/HTML/Home.html"><img src="/img/Logo.png"/></a></li>
+                    <li class="links"><a href="/HTML/Home.html">Trang chủ</a></li>
+                    <li class="links"><a href="/HTML/Cart.html">Giỏ hàng</a></li>
+                    <li class="links"><a href="/HTML/AboutUs.html">Chúng tôi</a></li>
+                    <li class="links"><a href="/HTML/Report.html">Phản hồi</a></li>
+                    <li class="search">
+                        <ul>
+                            <li><input type="text" placeholder="Nhập tên cần tìm..." value=""></li>
+                            <li><button>&#128269;</button></li>
+                        </ul>
+                    </li>
+                </ul>
+            </header>
+
+            <div class="content">
+
+                <div class="page-header">
+                    <div class="container">
+                        <h1 class="main-title">
+                            Liên hệ với chúng tôi
+                        </h1>
+                    </div>
+                </div>
+    
+                <div class="container">
+                    <div class="row">
+                        <hr style="margin-top: 5px; margin-bottom: 5px;">
+
+                        <h3 class="widget-title">Để lại ý kiến của bạn về chúng tôi</h3>
+
+                        <div class="textwidget">
+                            <p style="margin: 10px; font-size: 18px; font-family: Arial, Helvetica, sans-serif;">
+                                Nếu bạn gặp vấn đề hoặc có thắc mắc, đóng góp ý kiến gì về chúng tôi 
+                                bạn hãy điền vào form bên dưới. Cảm ơn bạn đã đồng hành cùng chúng tôi.
+                            </p>
+                            <p style="margin: 10px; font-size: 18px; font-family: Arial, Helvetica, sans-serif;">(Những nội dung có dấu <b style="color: red;">*</b> không thể bỏ trống)</p>
+                            <br>
+                        </div>
+                        
+                        <div style="margin-left: 200px;" class="textwidget">
+                            <form accept-charset="UTF-8" onsubmit="return submitForm()" class="form-contact">
+                                <div class="row1">
+                                    <span style="margin-right: 67px; font-size: 20px; font-weight: bold;">Tên của bạn:<sup style="color: red;">*</sup> </span>
+                                    <input type="text" id="name" name="Customer" placeholder="Nhập tên của bạn..." required/>
+                                </div>
+
+                                <div class="row1">
+                                    <span style="margin-right: 50px; font-size: 20px; font-weight: bold;">Email của bạn:<sup style="color: red;">*</sup> </span>
+                                    <input type="email" id="mail" name="Mail" placeholder="Nhập email của ban..." required/>
+                                </div>
+
+                                <div class="row1">
+                                    <span style="margin-right: 110px; font-size: 20px; font-weight: bold;">Tiêu đề:<sup style="color: red;">*</sup> </span>
+                                    <input type="text" id="subject" name="Subject" placeholder="Nhập tiêu đề..." required/>
+                                </div>
+
+                                <div class="row1">
+                                    <span style="margin-right: 62px; font-size: 20px; font-weight: bold;">Số điện thoại:<sup style="color: red;">*</sup> </span>
+                                    <input type="tel" id="phone" name="Phone" minlength="10" maxlength="11" pattern="[0-9]{3}[0-9]{4,5}[0-9]{3}" placeholder="Nhập số điện thoại của bạn..." required>
+                                </div>
+
+                                <div class="row2">
+                                    <span style="font-size: 20px; font-weight: bold;">Nội dung:<sup style="color: red;">*</sup> </span>
+                                    <textarea id="desc" name="description" cols="10" rows="20" placeholder="Nhập nội dung email..." required></textarea>
+                                </div>
+
+                                <div class="row1">
+                                    <span style="font-weight: bold; font-size: 20px;">Thêm hình ảnh lỗi <br> <label
+                                            style="margin-left: 30px; margin-right: 100px;">(nếu có)</label> </span>
+                                    <input type="file" id="file" name="fileupload" accept="img/*" style="font-size: 15px;">
+                                </div>
+                                <div id="preview">
+                                    <!-- Hình ảnh hiển thị ở đây -->
+                                </div>
+
+                                <button type="submit" class="submit" onclick="sendMail()">Send Mail</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="footer">
+                <div class="main-footer">
+                    <ul class="list">
+                        <li>
+                            <p style="margin-right:100px;">
+                                LIÊN HỆ QUA SỐ ĐIỆN THOẠI: <a href="tel:0975757994" target="_blank"><i style="font-size: 20px;" class="fas fa-phone"> 0975757994</i></a>
+                            </p>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/" target="_blank">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.google.com/" target="_blank">
+                                <i class="fab fa-skype"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/" target="_blank">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <p style="margin-right:100px;">
+                                <a href="/HTML/Home.html"> Trang chủ </a>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- <div class="bottom-footer">
+
+                </div> -->
+            </footer>
+        </div>
+
+        <a  href="#" 
+            class="scrollbutton" 
+            id="scrollbuttonid">
+            <i class="fa fa-angle-up"></i>
+        </a>
+        
+        <script src="/Js/MyJs.js"></script>
+    </body>
+</html>

@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style: none; /* Bỏ dấu câu trước danh sách <li>*/
+}
+a {
+    text-decoration: none; /* Không gạch chân khi gắn href*/
+    color: inherit; /* Giữ màu khi gắn href */
+}
+i {
+    font-size: 30px;
+}
+header {
+    background-color: aqua;
+    width: 100%;
+    height: 70px;
+}
+.links {
+    font-weight: bold;
+    margin-top: 20px;
+}
+.search {
+    font-weight: bold;
+    margin: 20px 20px 0 150px;
+}
+header ul {
+    display: flex;
+    font-size: 25px;
+}
+header ul li {
+    font-weight: bold;
+    width: 145px;
+}
+header ul li:nth-child(1) img {
+    width: 60px;
+    height: 60px;
+    margin-top: 5px;
+    margin-left:50px;
+}
+header ul li ul li:nth-child(1) input {
+    width: 195px;
+    height: 35px;
+    border-radius: 5px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+header ul li ul li:nth-child(2) button {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    margin-left: 60px;
+}
+.scrollbutton { 
+    display: none; 
+    position: fixed; 
+    bottom: 30px; 
+    right: 10px; 
+    background-color: cyan; 
+    padding: 10px; 
+    border-radius: 5px; 
+    font-size: 25px;
+    height: 40px;
+}
+.scrollbutton:hover { 
+    background-color: #2d6418; 
+    color: white; 
+    font-size: 25px;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    padding: 10px;
+    margin: 10px;
+}
+.main-title {
+    color: #1E90FF;
+    font-weight: bold;
+    font-size: 40px;
+}
+.page-header {
+    background-color: rgb(215, 226, 250);
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    display: flex;
+    margin: 10px;
+}
+.widget-title {
+    font-size: 22px;
+    color: #191970;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.form {
+    width: 500px;
+    padding: 6px;
+}
+.row1 {
+    margin: 10px;
+}
+.row2 {
+    margin: 10px;
+}
+input {
+    padding: 6px;
+    width: 50%;
+    height: 44px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+textarea {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 195px;
+    padding: 6px;
+    width: 50%;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+}
+.submit {
+    margin-left: 390px;
+    margin-top: 20px;
+    width: 90px;
+    height: 30px;
+    background-color: darksalmon;
+}
+.submit:hover {
+    background-color: aqua;
+}
+.footer {
+    display: flex;
+    background-color: darkslategray;
+    width: 100%;
+    height: 120px;
+    padding: 10px;
+}
+.main-footer {
+    color: white;
+}
+.list {
+    display: flex;
+}
+.list li {
+    margin: 20px;
+}
+#preview {
+    display: flex;
+    justify-content: center;
+}
