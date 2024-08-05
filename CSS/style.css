@@ -1,0 +1,346 @@
+/* local */
+body {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style-type: none; /* Bỏ dấu câu trước danh sách <li>*/
+    padding: 0;
+}
+
+a {
+    text-decoration: none; /* Không gạch chân khi gắn href*/
+    color: inherit; /* Giữ màu khi gắn href */
+}   
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    height: 100px;
+    line-height: 100px;
+    z-index: 100;
+}
+
+footer {
+    padding: 0;
+    height: 250px;
+    color: white;
+    background-color: rgba(150, 46, 41);
+}
+
+footer ul {
+    align-items: center;
+    margin: 0;
+}
+
+footer ul li {
+    padding: 10px;
+    font-size: 20px;
+}
+
+.link-follows {
+    display: flex;
+    /* margin-bottom: 70px; */
+}
+
+footer ul li:nth-child(2) {
+    margin-left: 160px;
+    margin-right: 20px;
+    font-size: 25px;
+}
+
+footer ul li:nth-child(3) {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 25px;
+}
+footer ul li:nth-child(4) {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 25px;
+}
+footer ul li:nth-child(5) {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 25px;
+}
+.wrapper-footer-info {
+    display: flex;
+    font-family: Courier New;
+    text-align: center;
+    justify-content: space-around;
+}
+.wrapper-footer-info div {
+    position: relative;
+}
+
+
+/* name-website */
+#Name{
+    font-size: 38px;
+    font-weight: 24px;
+    margin-left: 90px;
+}
+
+#Name a{
+    color: white;
+}
+
+
+/* tab-header */
+.nav-header {
+    margin-right: 80px;
+    /* display: flex; */
+}
+
+.nav-header ul {
+    display: flex;
+}
+
+.nav-header ul li a {
+    font-size: 21px;
+    color: white;
+    padding: 38px 10px 38px 10px;
+    margin: 0 3px 0 3px;
+    transition: background-color 0.6s;
+}
+
+.nav-header ul li a:hover {
+    background-color: rgba(54, 46, 41, 0.5);
+    color: rosybrown;
+}
+
+
+
+/* Scroll to top */
+#goToTop {
+    color: white;
+    padding: 18px 24px;
+    background-color: rgba(190, 46, 41, 0.6);
+    position: fixed;
+    right: 3%;
+    bottom: -10%;
+    transition: all 1s ease;
+    z-index: 10;
+}
+
+#goToTop:hover {
+    background-color: black;
+}
+
+#goToTop.slide-up {
+    bottom: 5%;
+}
+
+
+/* HOME */
+/* home main */
+.home-main {
+    width: 100%;
+    font-family: "Garamond";
+}
+
+.home-img {
+    background-image: url(img/home-main.jpg);
+}
+
+.parallax {
+    position: relative;
+    margin-bottom: 70px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100vh;
+}
+
+.parallax-img-text {
+    position: absolute;
+    top: 35%;
+    width: 100%;
+    text-align: center;
+}
+
+.parallax-img-text p {
+    color: white;
+    font-size: 2.0vw;
+}
+.head-title {
+    font-size: 6vw;
+    color: white;
+}
+
+
+/* Menu */
+.menu-img {
+    background-image: url(img/menu-main.jpg);
+}
+
+
+/* Contact */
+.contact-img {
+    background-image: url(img/contact-main.jpg);
+}
+
+.contact-main {
+    padding: 0 100px;
+    margin-bottom: 100px;
+}
+
+.container-contact hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.textwidget p {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.textwidget p b{
+    color: red;
+}
+
+.row1 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.row1 span {
+    font-size: 20px;
+    font-weight: bold;
+}
+.row1 span > sup {
+    color: red;
+}
+
+input {
+    height: 35px;
+    margin-top: 10px;
+}
+
+textarea {
+    height: 100px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    padding: 10px 10px;
+}
+
+input, textarea {
+    width: 100%;
+    background-color: rgb(248, 248, 248);
+    border: 2px solid rgb(230, 230, 230);
+}
+
+input:focus, textarea:focus {
+    background-color: white;
+}
+
+#file {
+    font-size: 15px;
+    border: 0;
+    width: 350px;
+    background-color: unset;
+}
+
+#preview {
+    display: flex;
+    justify-content: center;
+}
+
+.submit {
+    margin-top: 20px;
+    margin-left: 500px;
+    width: 100px;
+    height: 40px;
+    background-color: darksalmon;
+    transition: all 0.6s ease;
+}
+
+.submit:hover {
+    background-color: aqua;
+}
+
+
+/* blog */
+.blog-main {
+    padding-bottom: 30px;
+}
+
+.blog-img {
+    background-image: url(img/blog-main.png);
+}
+
+.container-blog {
+    max-height: 400px;
+}
+
+section {
+    display: block;
+    background-color: antiquewhite;
+}
+
+.title-blog-game {
+    text-align: center;
+    font-size: 36px;
+    color: indianred;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 30px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.row {
+    display: flex;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section hr {
+    max-width: 30%;
+    height: 6px;
+    background-color: orange;
+    border: none;
+}
+
+.section h2 {
+    color: #ff9800;
+    max-width: 50%;
+    margin: auto;
+    padding-left: 30%;
+}
+
+.section p {
+    color: #555;
+    max-width: 50%;
+    margin: auto;
+}
+
+.subheading {
+    color: #ff9800;
+    margin-bottom: 10px;
+}
+
+
+/* Scroll
+::-webkit-scrollbar {
+    width: 6px;
+    background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(220, 128, 104);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgb(180, 180, 180);
+    background-color: #F5F5F5;
+} */
