@@ -141,16 +141,16 @@ footer ul li:nth-child(5) {
 /* home main */
 .home-main {
     width: 100%;
-    font-family: "Garamond";
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .home-img {
-    background-image: url(img/home-main.jpg);
+    background-image: url(img/home-coffee/home-main.jpg);
 }
 
 .parallax {
     position: relative;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -174,11 +174,219 @@ footer ul li:nth-child(5) {
     color: white;
 }
 
+.sec {
+    margin-bottom: 100px;
+    padding: 0 150px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    position: relative;
+    color: rgba(120, 46, 41, 1);
+    margin-bottom: 60px;
+}
+
+h1:before {
+    content: " ";
+    width: 60%;
+    height: 50%;
+    left: 20%;
+    position: absolute;
+    border-bottom: 1px dashed #b4462a;
+    z-index: 1;
+}
+
+h1 span {
+    position: relative;
+    padding: 0 20px;
+    background-color: white;
+    z-index: 2;
+}
+
+.wrapper-sec1 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.img-sec1 {
+    width: 50%;
+    height: 400px;
+    margin-right: 50px;
+}
+
+h2 {
+    font-size: 45px;
+    margin-bottom: 40px;
+}
+
+.wrapper-sec1 p {
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+#wrapper-button-sec1 {
+    text-align: right;
+}
+
+.main-button {
+    background-color: rgb(190, 46, 41);
+    position: relative;
+    color: white;
+    font-size: 20px;
+    padding: 13px 50px 13px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: inline-block;
+}
+
+.main-button .round {
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    top: 3px;
+    right: 3px;
+    transition: all 0.5s;
+}
+
+.main-button .round i {
+    position: absolute;
+    top: 29%;
+    left: 40%;
+    transition: all 0.5s;
+}
+
+.main-button:hover {
+    padding-left: 40px;
+    padding-right: 30px
+}
+
+.main-button:hover .round {
+    width: 99%;
+}
+
+.contact-button:hover .round {
+    width: 95%;
+}
+
+.main-button:hover .round i {
+    left: 12%;
+}
+
+.sec1-img {
+    background-image: url(img/home-coffee/reser-home.jpg);
+}
+
+.img-button {
+    padding: 12px 25px;
+    font-size: 2vw;
+    color: white;
+    background-color: transparent;
+    border: 3px solid white;
+    border-radius: 300px;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    transition: background-color, color 0.7s;
+}
+
+.img-button:hover {
+    background-color: white;
+    color: black;
+}
+
+.wrapper-sec2 {
+    position: relative;
+}
+
+.sec2-imgs {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.sec2-imgs img {
+    width: 32%;
+    height: 45vh;
+}
+
+.sec2-text {
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.sec2-text p {
+    text-align: justify;
+}
+
+#wrapper-button-sec2 {
+    text-align: center;
+}
+
+.sec2-img {
+    background-image: url(img/home-coffee/counter-home.jpg);
+}
 
 /* Menu */
 .menu-img {
-    background-image: url(img/menu-main.jpg);
+    background-image: url(img/menu-coffee/menu-main.jpg);
 }
+
+.menu-body {
+    display: flex;
+    box-sizing: border-box;
+}
+
+.menu-list {
+    margin: 0 10px 30px 10px;
+}
+
+.menu-list h3 {
+    color: red;
+    font-size: 25px;
+}
+
+.menu-list h4 {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.content-menu {
+    display: flex;
+}
+
+.content-menu .click-prev {
+    flex: 0 0 2%;
+}
+
+.content-menu .click-next {
+    flex: 0 0 2%;
+    margin-left: 10px;
+}
+
+.content-menu .content-list {
+    flex: auto;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+.content-list .items {
+    flex: 0 0 calc(25%);
+    margin-left: 10px;
+    box-sizing: border-box;
+    transition: transform 0.5s ease-in-out;
+}
+
+.items img {
+    width: 100%;
+    height: 200px;
+}
+
 
 
 /* Contact */
@@ -281,8 +489,9 @@ input:focus, textarea:focus {
 
 section {
     display: block;
-    background-color: antiquewhite;
 }
+
+
 
 .title-blog-game {
     text-align: center;
@@ -329,7 +538,7 @@ section {
 }
 
 
-/* Scroll
+/* Scroll */
 ::-webkit-scrollbar {
     width: 6px;
     background-color: #f5f5f5;
@@ -343,4 +552,4 @@ section {
 ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 6px rgb(180, 180, 180);
     background-color: #F5F5F5;
-} */
+}
