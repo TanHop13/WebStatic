@@ -1,32 +1,55 @@
-const prevButton = document.querySelector('.click-prev');
-const nextButton = document.querySelector('.click-next');
-const contentList = document.querySelector('.content-list');
-let items = document.querySelectorAll('.items');
+window.addEventListener("load", function () {
+    const conMenu = document.querySelectorAll('.content-menu');
 
-function rotateItems() {
-    const firstItem = contentList.removeChild(items[0]);
-    contentList.appendChild(firstItem);
-    items = document.querySelectorAll('.items'); // Update the NodeList
-}
+    conMenu.forEach(contentMenu => {
+        const nextButton = contentMenu.querySelector('.click-next');
+        const prevButton = contentMenu.querySelector('.click-prev');
+        const contentList = contentMenu.querySelector('.content-list');
+        let items = contentList.querySelectorAll('.items');
+        let autoSlideInterval;
 
-function reverseRotateItems() {
-    const lastItem = contentList.removeChild(items[items.length - 1]);
-    contentList.insertBefore(lastItem, items[0]);
-    items = document.querySelectorAll('.items'); // Update the NodeList
-}
+        //bat su kien khi dang click prev hoac next
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(function () {
+                nextButton.click();
+            }, 4000);
+        }
 
-prevButton.addEventListener('click', () => {
-    reverseRotateItems();
-});
+        function stopAutoSlide() {
+            clearInterval(autoSlideInterval);
+        }
 
-nextButton.addEventListener('click', () => {
-    rotateItems();
-});
+        nextButton.addEventListener("click", function () {
+            stopAutoSlide();
+            const firstItem = contentList.removeChild(items[0]);
+            contentList.appendChild(firstItem);
+            items = contentList.querySelectorAll('.items');
+            startAutoSlide();
+        });
 
-// Automatically rotate items every 5 seconds
-setInterval(() => {
-    rotateItems();
-}, 5000);
+        prevButton.addEventListener("click", function () {
+            stopAutoSlide();
+            const lastItem = contentList.removeChild(items[items.length - 1]);
+            contentList.insertBefore(lastItem, items[0]);
+            items = contentList.querySelectorAll('.items');
+            startAutoSlide();
+        });
+
+        //tu chuyen doi
+        startAutoSlide();
+
+        // Bat su kien khi re chuot len san pham
+        items.forEach(item => {
+            item.addEventListener('mouseover', function () {
+                stopAutoSlide();
+            });
+
+            item.addEventListener('mouseout', function () {
+                startAutoSlide();
+            });
+        });
+    });
+})
 
 // // Function to add a new item
 // function addItem() {

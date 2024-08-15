@@ -17,8 +17,9 @@
     <script src="JS/jscripe.js"></script>
     <script src="JS/jquery-3.7.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/cloudinary-core/2.11.3/cloudinary-core-shrinkwrap.min.js"></script>
-    
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/cloudinary-core/2.11.3/cloudinary-core-shrinkwrap.min.js"></script>
+
     <!-- Send mail -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
@@ -28,9 +29,10 @@
             });
         })();
     </script>
+    <script src="JS/jsContact.js"></script>
 </head>
 
-<body onload="init_main()">
+<body>
     <header>
         <div id="Name">
             <a href="home.html">KATAKO</a>
@@ -57,11 +59,11 @@
 
     <div class="contact-main">
         <h1> <span> Leave your comments about us </span> </h1>
-        
+
         <div class="container-contact">
             <div>
                 <hr>
-        
+
                 <div class="textwidget">
                     <p>
                         If you have any problems or questions, please fill out the form below. Thank you for joining us.
@@ -69,46 +71,47 @@
                     <p>(Fields marked with <b>*</b> cannot be left blank.)</p>
                     <br>
                 </div>
-        
+
                 <div class="textwidget">
-                    <form accept-charset="UTF-8" onsubmit="return submitForm()" class="form-contact">
+                    <form accept-charset="UTF-8" onsubmit="return false" class="form-contact">
                         <div class="row1">
                             <span>Your Name:<sup>*</sup> </span>
                             <input type="text" id="name" name="Customer" placeholder="Nhập tên của bạn..." required />
                         </div>
-        
+
                         <div class="row1">
                             <span>Your Email:<sup>*</sup> </span>
                             <input type="email" id="mail" name="Mail" placeholder="Nhập email của ban..." required />
                         </div>
-        
+
                         <div class="row1">
                             <span>Tittle:<sup>*</sup> </span>
                             <input type="text" id="subject" name="Subject" placeholder="Nhập tiêu đề..." required />
                         </div>
-        
+
                         <div class="row1">
                             <span>Your Phone:<sup>*</sup> </span>
                             <input type="tel" id="phone" name="Phone" minlength="10" maxlength="11"
-                                pattern="[0-9]{3}[0-9]{4,5}[0-9]{3}" placeholder="Nhập số điện thoại của bạn..." required>
+                                pattern="[0-9]{3}[0-9]{4,5}[0-9]{3}" placeholder="Nhập số điện thoại của bạn..."
+                                required>
                         </div>
-        
+
                         <div class="row1">
                             <span>Content:<sup>*</sup> </span>
-                            <textarea id="desc" name="description" cols="10" rows="20" placeholder="Nhập nội dung email..."
-                                required></textarea>
+                            <textarea id="desc" name="description" cols="10" rows="20"
+                                placeholder="Nhập nội dung email..." required></textarea>
                         </div>
-        
+
                         <div class="row1">
-                            <span>Add Error Image (if any)</span><br/>
+                            <span>Add Error Image (if any)</span><br />
                             <input type="file" id="file" name="fileupload" accept="img/*">
                         </div>
 
                         <div id="preview">
                             <!-- Hình ảnh hiển thị ở đây -->
                         </div>
-        
-                        <button type="submit" class="submit" onclick="sendMail()">Send Mail</button>
+
+                        <button type="submit" class="submit">Send Mail</button>
                     </form>
                 </div>
             </div>
@@ -176,6 +179,6 @@
     <div class="wrapper-goToTop-button">
         <a id="goToTop" href="#"><i class="fas fa-chevron-up"></i></i></a>
     </div>
-    <script src="JS/jsContact.js"></script>
 </body>
+
 </html>
