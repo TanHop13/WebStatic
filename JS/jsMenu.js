@@ -49,6 +49,29 @@ window.addEventListener("load", function () {
             });
         });
     });
+    
+//     let p = this.document.querySelector(".show-cart")
+//     let add = this.document.querySelectorAll(".add-cart");
+//     for (let i of add) {
+//         i.addEventListener("click", function (e) {
+//             e.preventDefault();
+//             let name = document.getElementById("name-pro").value;
+//             let price = document.getElementById("price-pro").value;
+//             let image = document.getElementById("img-pro").value;
+
+//             let h = `
+//                 <div class="product">
+//                     <div>
+//                         <img src="${image}" alt="${name}" />
+//                         <h2>${name}</h2>
+//                         <div class="price">${price}<sup>đ</sup></div>
+//                         <a href="#" class="close">&times;</a>
+//                     </div>
+//                 </div>
+//             `;
+//             p.innerHTML = p.innerHTML + h;
+//         })
+//     }
 })
 
 // // Function to add a new item
