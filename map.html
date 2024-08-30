@@ -17,6 +17,7 @@
     <script src="JS/jscripe.js"></script>
     <script src="JS/jquery-3.7.1.min.js"></script>
     <script src="JS/jsMenu.js"></script>
+    <script src="JS/jsMap.js"></script>
 </head>
 
 <body>
@@ -29,23 +30,30 @@
                 <ul>
                     <li><a href="home.html" class="delay-link">Home</a></li>
                     <li><a href="menu.html" class="delay-link">Menu</a></li>
-                    <li><a href="reservation.html" class="delay-link">Reservation</a></li>
                     <li><a href="blog.html" class="delay-link">Blog</a></li>
                     <li><a href="contact.html" class="delay-link">Contact</a></li>
+                    <li><a href="map.html" class="delay-link">Map</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <div class="home-main">
-        <div class="home-img parallax">
+    <div class="map-main">
+        <div class="map-img parallax">
             <div class="parallax-img-text">
                 <span class="head-title t1">A Good Cup Of Coffee</span> <br>
                 <span class="head-title t2">A Beautiful New Day</span>
             </div>
         </div>
-        <div class="show-cart">
-
+        <div class="content-map">
+            <div class="body-map">
+                <h3>Location of Branch 1: 97 Vo Van Tan Street, Ward 6, District 3, Ho Chi Minh City.</h3>
+                <canvas id="mapCanvas1" width="970" height="370"></canvas>
+            </div>
+            <div class="body-map">
+                <h3>Location of Branch 2: 35-37 Ho Hao Hon, Co Giang Ward, District 1, Ho Chi Minh City</h3>
+                <canvas id="mapCanvas2" width="970" height="700"></canvas>
+            </div>
         </div>
     </div>
 

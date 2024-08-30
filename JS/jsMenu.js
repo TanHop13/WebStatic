@@ -49,7 +49,9 @@ window.addEventListener("load", function () {
             });
         });
     });
-    
+})
+
+// Add product
 //     let p = this.document.querySelector(".show-cart")
 //     let add = this.document.querySelectorAll(".add-cart");
 //     for (let i of add) {
@@ -72,7 +74,6 @@ window.addEventListener("load", function () {
 //             p.innerHTML = p.innerHTML + h;
 //         })
 //     }
-})
 
 // // Function to add a new item
 // function addItem() {
