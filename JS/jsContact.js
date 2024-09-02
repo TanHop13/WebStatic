@@ -23,7 +23,7 @@ window.addEventListener("load", function () {
 					// Tạo phần tử img để hiển thị hình ảnh
 					const img = document.createElement('img');
 					img.src = fileContent;
-					img.style.maxWidth = '100%'; // Giới hạn kích thước hiển thị
+					img.style.maxWidth = '100%';
 					img.style.height = 'auto';
 					
 					// Thêm hình ảnh mới vào phần preview

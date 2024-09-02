@@ -94,6 +94,7 @@ footer ul li:nth-child(5) {
 /* tab-header */
 .nav-header {
     margin-right: 80px;
+    position: relative;
     /* display: flex; */
 }
 
@@ -275,6 +276,28 @@ h2 {
     left: 12%;
 }
 
+.main-button-2 {
+    position: relative;
+    color: black;
+    font-size: 20px;
+    padding: 13px 50px 13px 20px;
+    border: 1px solid black;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: inline-block;
+}
+
+.main-button-2 span {
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
+.main-button-2:hover {
+    background-color: aqua;
+    color: rgb(207, 54, 54);
+}
+
 .sec1-img {
     background-image: url(img/home-coffee/reser-home.jpg);
 }
@@ -338,6 +361,58 @@ h2 {
 
 .menu-body {
     box-sizing: border-box;
+}
+
+/*Tạo menu cart*/
+.tab-content > div {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    max-height: 270px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.order {
+    padding: 10px;
+    margin-left: 40%;
+    transition: all 0.5s;
+}
+
+.order:hover {
+    background-color: rgb(76, 249, 249);
+    color: rgb(207, 54, 54);
+}
+
+.cart-item {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    margin: 5px 0;
+    padding: 5px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.cart-name, .cart-price, .quantity, .delete-button {
+    margin-right: 10px;
+}
+
+.delete-button {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
 
 .menu-list {

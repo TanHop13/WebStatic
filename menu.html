@@ -17,6 +17,17 @@
     <script src="JS/jscripe.js"></script>
     <script src="JS/jquery-3.7.1.min.js"></script>
     <script src="JS/jsMenu.js"></script>
+    
+    <!-- Order-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "wtXVbhxRVLwBufKxr",
+            });
+        })();
+    </script>
+    <script src="JS/jsTab.js"></script>
 </head>
 
 <body>
@@ -32,7 +43,15 @@
                     <li><a href="blog.html" class="delay-link">Blog</a></li>
                     <li><a href="contact.html" class="delay-link">Contact</a></li>
                     <li><a href="map.html" class="delay-link">Map</a></li>
+                    <li class="list"><a href="#tabcart"><i class="fas fa-cart-plus"></i></a></li>
                 </ul>
+                <div class="tab-content">
+                    <div id="tabcart">
+                        <h3>No product</h3>
+                        <button class="order">Order now</button>
+                    </div>
+                    <p id="demo"></p>
+                </div>
             </nav>
         </div>
     </header>

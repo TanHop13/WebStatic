@@ -1,4 +1,6 @@
 window.addEventListener("load", function () {
+
+    //list menu
     const conMenu = document.querySelectorAll('.content-menu');
 
     conMenu.forEach(contentMenu => {
@@ -49,44 +51,54 @@ window.addEventListener("load", function () {
             });
         });
     });
+
+    //Menu add cart
+    const addToCart = document.querySelectorAll('.items a');
+    const h3Cart = document.querySelector('#tabcart h3');
+    const orderCart = document.querySelector('#tabcart .order');
+
+    if (h3Cart) {
+        orderCart.style.display = 'none';
+    }
+
+    addToCart.forEach((button) => {
+        button.addEventListener('click', function(event) {
+            event.preventDefault();
+            
+            const item = button.parentElement;
+            const productName = item.querySelector('h3').textContent;
+            const productPrice = item.querySelector('h4').textContent;
+            
+            // Check product
+            const Product = document.querySelector(`#tabcart div[data-name="${productName}"]`);
+            if (Product) {
+                const quantityElement = Product.querySelector('.quantity');
+                quantityElement.textContent = parseInt(quantityElement.textContent) + 1;
+            } else {
+                const cart = document.createElement('div');
+                cart.setAttribute('data-name', productName);
+                cart.innerHTML = `
+                    <span class="cart-name">${productName}</span> - 
+                    <span class="cart-price">${productPrice}</span> - 
+                    Quantity: <span class="quantity">1</span>
+                    <button class="delete-button">Delete</button>
+                `;
+                
+                if (h3Cart) {
+                    h3Cart.remove();
+                    orderCart.style.display = 'block';
+                }
+
+                const tabCart = document.getElementById('tabcart');
+                // tabCart.appendChild(cart);
+                tabCart.insertBefore(cart, tabCart.lastElementChild);
+
+                const deleteButton = cart.querySelector('.delete-button');
+                deleteButton.addEventListener('click', function() {
+                    cart.remove();
+                });
+            }
+        });
+    });
+
 })
-
-// Add product
-//     let p = this.document.querySelector(".show-cart")
-//     let add = this.document.querySelectorAll(".add-cart");
-//     for (let i of add) {
-//         i.addEventListener("click", function (e) {
-//             e.preventDefault();
-//             let name = document.getElementById("name-pro").value;
-//             let price = document.getElementById("price-pro").value;
-//             let image = document.getElementById("img-pro").value;
-
-//             let h = `
-//                 <div class="product">
-//                     <div>
-//                         <img src="${image}" alt="${name}" />
-//                         <h2>${name}</h2>
-//                         <div class="price">${price}<sup>đ</sup></div>
-//                         <a href="#" class="close">&times;</a>
-//                     </div>
-//                 </div>
-//             `;
-//             p.innerHTML = p.innerHTML + h;
-//         })
-//     }
-
-// // Function to add a new item
-// function addItem() {
-//     const newItem = document.createElement('div');
-//     newItem.classList.add('items');
-//     newItem.innerHTML = `
-//         <img src="menu-3.jpg">
-//         <h4>New Coffee</h4>
-//         <a href="#" class="btn">add to cart</a>
-//     `;
-//     contentList.appendChild(newItem);
-//     items = document.querySelectorAll('.items'); // Update the NodeList
-// }
-
-// // Example of adding a new item
-// addItem();
