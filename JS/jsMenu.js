@@ -109,6 +109,7 @@ window.addEventListener("load", function () {
                     if (tabCart.children.length < 1) {
                         h3Cart.style.display = 'block';
                         orderCart.style.display = 'none';
+                        localStorage.clear();
                     }
                 });
             }

@@ -122,6 +122,7 @@ window.addEventListener("load", function () {
 				emailjs.send("service_lbqz8ae","template_8hp6b2i",params2).then(function (res) {
 					if (res.status === 200) {
 						alert("Hệ thống đã ghi nhận mail của bạn. Trân thành cảm ơn!");
+						location.reload();
 					}
 					else {
 						alert("Hệ thống đang gặp lỗi. Mong bạn hãy thử lại lần sau.")

@@ -370,35 +370,25 @@ h2 {
     left: 0;
     z-index: 1000;
     background-color: white;
-    width: 100%;
+    width: 385px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     display: none;
     max-height: 270px;
     overflow-y: auto;
     border: 1px solid #ddd;
-    padding: 10px;
+    padding-left: 35px;
 }
 
 .order {
     padding: 10px;
-    margin-left: 40%;
+    margin-left: 35%;
+    margin-bottom: 15px;
     transition: all 0.5s;
 }
 
 .order:hover {
     background-color: rgb(76, 249, 249);
     color: rgb(207, 54, 54);
-}
-
-.cart-item {
-    height: 50px;
-    display: flex;
-    align-items: center;
-    border: 1px solid #ddd;
-    margin: 5px 0;
-    padding: 5px;
-    box-sizing: border-box;
-    overflow: hidden;
 }
 
 .cart-name, .cart-price, .quantity, .delete-button {
